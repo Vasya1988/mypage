@@ -1,0 +1,49 @@
+.AboutMe {
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.AboutMe img:not(.Avatar) {
+    max-width: 64px;
+}
+.MyInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 32px;
+}
+.MyInfo h1, h2 {
+    margin: 0;
+}
+.MyInfo h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.MyInfo h1 span {
+    font-weight: 700;
+}
+.MyInfo h2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+.IconsWrap {
+    display: grid;
+    grid-template-columns: repeat(4, 64px);
+    grid-template-rows: repeat(1, 128px);
+    justify-content: space-between;
+    margin-top: 94px;
+}
+.IconFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.IconFrame span {
+    font-weight: 600;
+}
+.Avatar {
+    max-width: 454px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
