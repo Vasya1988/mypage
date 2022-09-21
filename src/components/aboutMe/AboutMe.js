@@ -1,4 +1,5 @@
-import classes from './AboutMe.module.css';
+import classes from './AboutMe.module.sass';
+import React from 'react';
 
 const AboutMe = (props) => {
     return (

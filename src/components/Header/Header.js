@@ -1,6 +1,8 @@
-import classes from './Header.module.css'
+import classes from './Header.module.sass'
+import React from 'react';
+import {Routes, Route, Link} from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header
             className={classes.Header}
@@ -8,9 +10,9 @@ const Header = () => {
             <nav
                 className={classes.Header__nav}
             >
-                <a href='#'>about me</a>
-                <a href='#'>my works</a>
-                <a href='#'>blog</a>
+                <Link to='/about'>about me</Link>
+                <Link to='/works'>my works</Link>
+                <Link to='/blog'>blog</Link>
             </nav>
 
         </header>
