@@ -1,6 +1,6 @@
 import classes from './Header.module.sass'
 import React from 'react';
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route, Link, NavLink} from 'react-router-dom';
 
 const Header = (props) => {
     return (
@@ -10,9 +10,9 @@ const Header = (props) => {
             <nav
                 className={classes.Header__nav}
             >
-                <Link to='/about'>about me</Link>
-                <Link to='/works'>my works</Link>
-                <Link to='/blog'>blog</Link>
+                <NavLink to='/mypage'>about me</NavLink>
+                <NavLink to='/works'>my works</NavLink>
+                <NavLink to='/blog'>blog</NavLink>
             </nav>
 
         </header>

@@ -61,7 +61,7 @@ const MainFrame = () => {
             <Header />
             <Routes >
                 <Route
-                    path='/about'
+                    path='/mypage'
                     element={<AboutMe works={myWorks} logo={skillsIcons} />}
                 ></Route>
                 <Route
