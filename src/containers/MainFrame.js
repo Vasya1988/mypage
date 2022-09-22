@@ -9,14 +9,40 @@ import {Routes, Route, Link} from 'react-router-dom';
 const MainFrame = () => {
 
     const [skillsIcons, setSkillsIcons] = useState({
-        iconHtml: require('../images/logo/html_logo.png'),
-        iconCss: require('../images/logo/css_logo.png'),
-        iconReact: require('../images/logo/react_logo.png'),
-        iconJavaScript: require('../images/logo/js_logo.png'),
-        iconGitHub: require('../images/logo/github_logo.png'),
-        iconGitHubTwo: require('../images/logo/github_2_logo.png'),
-        iconPhotoshop: require('../images/logo/photoshop_logo.png'),
-        iconIllustrator: require('../images/logo/illustrator_logo.png'),
+        icons: [
+            {
+                name: 'Html',
+                src: require('../images/logo/html_logo.png')
+            },
+            {
+                name: 'CSS',
+                src: require('../images/logo/css_logo.png')
+            },
+            {
+                name: 'React',
+                src: require('../images/logo/react_logo.png')
+            },
+            {
+                name: 'JavaScript',
+                src: require('../images/logo/js_logo.png')
+            },
+            {
+                name: 'Sass',
+                src: require('../images/logo/sass_logo.png')
+            },
+            {
+                name: 'GitHub',
+                src: require('../images/logo/github_2_logo.png')
+            },
+            {
+                name: 'Photoshop',
+                src: require('../images/logo/photoshop_logo.png')
+            },
+            {
+                name: 'Illustrator',
+                src: require('../images/logo/illustrator_logo.png')
+            },
+        ],
         avatar: require('../images/logo/avatar.png'),
         arrow: require('../images/arrow.png')
     });

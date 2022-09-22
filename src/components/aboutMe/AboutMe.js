@@ -16,62 +16,18 @@ const AboutMe = (props) => {
                 <div
                     className={classes.IconsWrap}
                 >
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>Html</span>
-                        <img  
-                            src={props.logo.iconHtml}>
-                        </img>
-                    </div>
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>CSS</span>
-                        <img
-                            src={props.logo.iconCss}
-                        ></img>
-                    </div>
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>React</span>
-                        <img
-                            src={props.logo.iconReact}
-                        ></img>
-                    </div>
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>JavaScript</span>
-                        <img
-                            src={props.logo.iconJavaScript}
-                        ></img>
-                    </div>
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>GitHub</span>
-                        <img
-                            src={props.logo.iconGitHubTwo}
-                        ></img>
-                    </div>
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>Photoshop</span>
-                        <img
-                            src={props.logo.iconPhotoshop}
-                        ></img>
-                    </div>
-                    <div
-                        className={classes.IconFrame}
-                    >
-                        <span>Illustrator</span>
-                        <img
-                            src={props.logo.iconIllustrator}
-                        ></img>
-                    </div>
+                    {props.logo.icons.map((icon) => {
+                        return (
+                            <div
+                            className={classes.IconFrame}
+                            >
+                                <span>{icon.name}</span>
+                                <img  
+                                    src={icon.src}>
+                                </img>
+                            </div>
+                        )
+                    })}   
                 </div>
             </div>
             <img 
