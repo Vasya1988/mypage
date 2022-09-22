@@ -1,4 +1,4 @@
-import classes from './MainFrame.module.css';
+import classes from './MainFrame.module.sass';
 import Header from '../components/Header/Header';
 import AboutMe from '../components/aboutMe/AboutMe';
 import { useState } from 'react';

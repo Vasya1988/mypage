@@ -2,6 +2,14 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     align-items: start
+    @media screen and (max-width: 980px)
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: flex-start
+    @media screen and (max-width: 616px)
+        justify-content: flex-start
+        margin-left: 62px
 .Work
     margin-top: 140px
     max-width: 300px
@@ -24,3 +32,10 @@
         margin-top: 4px
         font-weight: 300
         text-align: left
+    @media screen and (max-width: 980px)
+        margin-top: 96px
+    @media screen and (max-width: 900px)
+        margin-top: 64px
+    @media screen and (max-width: 616px)
+        margin-top: 44px
+        
