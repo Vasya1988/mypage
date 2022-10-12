@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;EACN,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,MAAM;EACjB,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,IAAI;EAClB,aAAa,EAAE,KAAK;EACpB,UAAU,EAAE,UAAU;EACtB,oCAAoC;IAPxC,UAAU;MAQF,OAAO,EAAE,CAAC",
+"sources": ["MainFrame.module.sass"],
+"names": [],
+"file": "MainFrame.module.css"
+}
