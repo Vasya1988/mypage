@@ -16,10 +16,11 @@ const AboutMe = (props) => {
                 <div
                     className={classes.IconsWrap}
                 >
-                    {props.logo.icons.map((icon) => {
+                    {props.logo.icons.map((icon, index) => {
                         return (
                             <div
                             className={classes.IconFrame}
+                            key={index}
                             >
                                 <span>{icon.name}</span>
                                 <img  

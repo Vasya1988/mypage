@@ -1,6 +1,7 @@
 import classes from './Header.module.sass'
 import React from 'react';
-import {Routes, Route, Link, NavLink} from 'react-router-dom';
+import {Routes, Route, Link, NavLink} from 'react-router-dom'
+import WeatherApp from '../weather-app/Weather-app';
 
 const Header = (props) => {
     return (
@@ -14,7 +15,7 @@ const Header = (props) => {
                 <NavLink to='/works'>my works</NavLink>
                 <NavLink to='/blog'>blog</NavLink>
             </nav>
-
+            <WeatherApp />
         </header>
     )
 }
