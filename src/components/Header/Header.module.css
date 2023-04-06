@@ -1,5 +1,6 @@
 Header {
-  display: flex; }
+  display: flex;
+  justify-content: space-around; }
   Header nav {
     display: flex;
     align-items: flex-end;
