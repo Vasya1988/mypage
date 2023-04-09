@@ -15,7 +15,9 @@ const Header = (props) => {
                 <NavLink to='/works'>my works</NavLink>
                 <NavLink to='/blog'>blog</NavLink>
             </nav>
-            <WeatherApp />
+            <WeatherApp 
+                weatherData={props.weatherData}
+            />
         </header>
     )
 }

@@ -7,7 +7,22 @@ import Blog from '../components/blog/Blog';
 import {Routes, Route, Link} from 'react-router-dom';
 
 const MainFrame = () => {
+    const fetchWeather = async () => {
+        const apiKey = '57ad26d8d8989166f0ae73503542de6d'
 
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${'denver'}&appid=${apiKey}&units=metric&lang=ru`)
+        .then(res => res.json())
+        .then(data => setDataWeather(
+            {
+                name: data.name, 
+                temp: data.main.temp
+            },
+            console.log(data)
+        ))
+    }
+    
+    const [dataWeather, setDataWeather] = useState(fetchWeather)
+    console.log(dataWeather)
     const [skillsIcons, setSkillsIcons] = useState({
         icons: [
             {
@@ -84,7 +99,9 @@ const MainFrame = () => {
         <div
             className={classes.MainFrame}
         >
-            <Header />
+            <Header 
+                weatherData={dataWeather}
+            />
             <Routes >
                 <Route
                     path='/mypage'
