@@ -15,7 +15,8 @@ const MainFrame = () => {
         .then(data => setDataWeather(
             {
                 name: data.name, 
-                temp: data.main.temp
+                temp: data.main.temp,
+                icon: data.weather[0].icon
             },
             console.log(data)
         ))
