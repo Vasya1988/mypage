@@ -15,9 +15,13 @@ const Header = (props) => {
                 <NavLink to='/works'>my works</NavLink>
                 <NavLink to='/blog'>blog</NavLink>
             </nav>
-            <WeatherApp 
-                weatherData={props.weatherData}
-            />
+            <div className={classes.codeWars}>
+                <img src='https://www.codewars.com/users/va5ily/badges/small' />
+                <WeatherApp 
+                    weatherData={props.weatherData}
+                />
+            </div>
+            
         </header>
     )
 }
