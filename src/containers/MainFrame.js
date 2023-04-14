@@ -70,6 +70,11 @@ const MainFrame = () => {
             url: 'https://vasya1988.github.io/weather-react-app/'
         },
         {
+            name: 'Routes',
+            description: 'Проложение маршрута с возможностью перетаскивания точек маршрута',
+            url: 'https://vasya1988.github.io/routes-test/'
+        },
+        {
             name: 'Buy Cart',
             description: 'Корзина интернет магазина. Добавление, удаление, суммирование заказа',
             url: 'https://vasya1988.github.io/buyRolls/'
@@ -88,11 +93,6 @@ const MainFrame = () => {
             name: 'Social Survey',
             description: 'Опрос для пользователей интренет-магазина детской обуви',
             url: 'https://vasya1988.github.io/social-survey/'
-        },
-        {
-            name: 'Interview',
-            description: 'Студенческий проект квиз опрос',
-            url: 'https://vasya1988.github.io/interview/'
         }
     ])
 

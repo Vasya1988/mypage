@@ -4,12 +4,18 @@ Header
     .codeWars
         display: flex
         align-items: flex-end
+        .codeWarsLink
+            display: flex
         @media screen and (max-width: 980px)
             width: 90%
             justify-content: space-between
         @media screen and (max-width: 616px)
+            margin-top: 10px
             flex-direction: column
             align-items: stretch
+            .codeWarsLink img
+                width: 100%
+        
     nav 
         display: flex
         align-items: flex-end

@@ -16,7 +16,13 @@ const Header = (props) => {
                 <NavLink to='/blog'>blog</NavLink>
             </nav>
             <div className={classes.codeWars}>
-                <img src='https://www.codewars.com/users/va5ily/badges/small' />
+                <a 
+                    href='https://www.codewars.com/users/va5ily'
+                    target='_blank'
+                    className={classes.codeWarsLink}
+                >
+                    <img src='https://www.codewars.com/users/va5ily/badges/small' />
+                </a>
                 <WeatherApp 
                     weatherData={props.weatherData}
                 />

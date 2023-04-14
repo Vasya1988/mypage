@@ -11,7 +11,7 @@ const AboutMe = (props) => {
                     className={classes.MyInfo}
                 >
                     <h1><span>Romanov</span> Vasily</h1>
-                    <h2>Junior frontend developer</h2>
+                    <h2>Frontend developer</h2>
                 </div>
                 <div
                     className={classes.IconsWrap}
@@ -34,7 +34,6 @@ const AboutMe = (props) => {
             <img 
                 src={props.logo.avatar}
                 className={classes.Avatar}
-            
             ></img>
         </div>
     )
