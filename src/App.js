@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import MainFrame from './containers/MainFrame';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <MainFrame />

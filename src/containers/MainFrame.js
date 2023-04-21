@@ -6,7 +6,7 @@ import MyWorks from '../components/myWorks/MyWorks';
 import Blog from '../components/blog/Blog';
 import {Routes, Route, Link} from 'react-router-dom';
 
-const MainFrame = () => {
+const MainFrame = (props) => {
     const fetchWeather = async () => {
         const apiKey = '57ad26d8d8989166f0ae73503542de6d'
 
@@ -96,12 +96,15 @@ const MainFrame = () => {
         }
     ])
 
+    const [darkModeIcons, setDarkModeIcons] = useState({light: require('../images/light-mode-icon.png'), dark: require('../images/night-mode-icon_dark-blue.png')})
+
     return (
         <div
             className={classes.MainFrame}
         >
             <Header 
                 weatherData={dataWeather}
+                darkModeIcons = {darkModeIcons}
             />
             <Routes >
                 <Route

@@ -2,8 +2,10 @@ import classes from './Header.module.sass'
 import React from 'react';
 import {Routes, Route, Link, NavLink} from 'react-router-dom'
 import WeatherApp from '../weather-app/Weather-app';
+import DarkMode from '../darkMode/DarkMode';
 
 const Header = (props) => {
+
     return (
         <header
             className={classes.Header}
@@ -25,6 +27,9 @@ const Header = (props) => {
                 </a>
                 <WeatherApp 
                     weatherData={props.weatherData}
+                />
+                <DarkMode 
+                    darkModeIcons={props.darkModeIcons}
                 />
             </div>
             
