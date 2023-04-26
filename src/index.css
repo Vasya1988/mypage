@@ -1,11 +1,16 @@
 :root {
-  --dayColor: #fff;
-  --hoverDayColor: #1c1c1c;
-  --hoverDarkColor: #fff;
-  --textDayColor: #1c1c1c;
-  --textDarkColor: #fff;
-  --activeDayColor: #fff;
-  --activeDarkColor: #1c1c1c;
+  --backgroundColor: #fff;
+  --hoverBackgroundColor: #1c1c1c;
+  --textColor: #1c1c1c;
+  --activeTextColor: #fff;
+
+}
+
+.darkMode {
+  --backgroundColor: #1c1c1c;
+  --textColor: #fff;
+  --hoverBackgroundColor: #f16a0f;
+  --activeTextColor: #1c1c1c;
 }
 
 body {
@@ -16,8 +21,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: var(--dayColor);
-  color: var(--textDayColor);
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+}
+a {
+  color: var(--textColor)
 }
 
 code {
@@ -26,8 +34,8 @@ code {
 }
 
 .active {
-  background-color: var(--hoverDayColor);
-  color: var(--activeDayColor);
+  background-color: var(--hoverBackgroundColor);
+  color: var(--activeTextColor);
   padding: 2px 14px 4px 14px;
   border-radius: 0.4em;
 }
