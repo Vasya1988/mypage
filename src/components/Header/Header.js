@@ -29,6 +29,7 @@ const Header = (props) => {
                     weatherData={props.weatherData}
                 />
                 <DarkMode 
+                    theme={props.theme}
                     darkModeIcons={props.darkModeIcons}
                 />
             </div>

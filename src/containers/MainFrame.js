@@ -7,6 +7,11 @@ import Blog from '../components/blog/Blog';
 import {Routes, Route, Link} from 'react-router-dom';
 
 const MainFrame = (props) => {
+    if (new Date().getHours() > 19) {
+        document.documentElement.classList.add('darkMode')
+       } else {
+        document.documentElement.classList.remove('darkMode');
+       }
     const fetchWeather = async () => {
         const apiKey = '57ad26d8d8989166f0ae73503542de6d'
 
@@ -18,12 +23,12 @@ const MainFrame = (props) => {
                 temp: data.main.temp,
                 icon: data.weather[0].icon
             },
-            console.log(data)
+            console.log('from fetch -->', data)
         ))
     }
     
     const [dataWeather, setDataWeather] = useState(fetchWeather)
-    console.log(dataWeather)
+    console.log('from data weather --> ', dataWeather)
     const [skillsIcons, setSkillsIcons] = useState({
         icons: [
             {
@@ -96,7 +101,12 @@ const MainFrame = (props) => {
         }
     ])
 
-    const [darkModeIcons, setDarkModeIcons] = useState({light: require('../images/light-mode-icon.png'), dark: require('../images/night-mode-icon_dark-blue.png')})
+    const darkModeIcons = {
+        light: require('../images/light-mode-icon.png'), 
+        dark: require('../images/night-mode-icon_dark-blue.png')
+    }
+
+    const [darkTheme, setDarkTheme] = useState(document.documentElement.classList.contains('darkMode') ? 'dark' : 'light')
 
     return (
         <div
@@ -105,6 +115,7 @@ const MainFrame = (props) => {
             <Header 
                 weatherData={dataWeather}
                 darkModeIcons = {darkModeIcons}
+                theme={darkTheme}
             />
             <Routes >
                 <Route

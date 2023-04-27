@@ -1,18 +1,22 @@
 import classes from './DarkMode.module.sass'
+import appStyle from '../../App.css'
 
 const DarkMode = (props) => {
 
-    const checkHours = () => new Date().getHours() > 19 ? props.darkModeIcons.dark : props.darkModeIcons.light
+    const themeIcons = () => props.theme === 'light' ? props.darkModeIcons.light : props.darkModeIcons.dark
+
+    console.log(props.theme)
     
     return (
         <div
             className={classes.DarkMode}
         >
-            <div
+            <button
                 className={classes.modeIcon}
+                style={{backgrounImage: themeIcons()}}
             >
-                <img src={checkHours()} />
-            </div>
+                <img src={themeIcons()} />
+            </button>
             
         </div>
     )
