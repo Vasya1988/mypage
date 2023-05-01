@@ -8,13 +8,19 @@
   background-color: #474747;
   border-radius: 14px; }
   .DarkMode .modeIcon {
+    padding: 0;
     width: 18px;
     height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: none;
     border-radius: 50%;
     position: relative;
     left: 0;
     transition: ease-in 0.2s; }
     .DarkMode .modeIcon img {
-      width: 100%; }
+      max-width: 18px; }
 
 /*# sourceMappingURL=DarkMode.module.css.map */

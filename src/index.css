@@ -3,7 +3,7 @@
   --hoverBackgroundColor: #1c1c1c;
   --textColor: #1c1c1c;
   --activeTextColor: #fff;
-
+  --buttonLeft: 0
 }
 
 .darkMode {
@@ -11,6 +11,7 @@
   --textColor: #fff;
   --hoverBackgroundColor: #f16a0f;
   --activeTextColor: #1c1c1c;
+  --buttonLeft: 28px;
 }
 
 body {

@@ -31,6 +31,7 @@ const Header = (props) => {
                 <DarkMode 
                     theme={props.theme}
                     darkModeIcons={props.darkModeIcons}
+                    setDarkTheme={props.setDarkTheme}
                 />
             </div>
             

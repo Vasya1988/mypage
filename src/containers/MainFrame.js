@@ -1,17 +1,18 @@
 import classes from './MainFrame.module.sass';
 import Header from '../components/Header/Header';
 import AboutMe from '../components/aboutMe/AboutMe';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MyWorks from '../components/myWorks/MyWorks';
 import Blog from '../components/blog/Blog';
 import {Routes, Route, Link} from 'react-router-dom';
 
 const MainFrame = (props) => {
-    if (new Date().getHours() > 19) {
-        document.documentElement.classList.add('darkMode')
-       } else {
-        document.documentElement.classList.remove('darkMode');
-       }
+    useEffect(() => {
+        if (new Date().getHours() > 19 && darkTheme === 'light') {
+            document.documentElement.classList.add('darkMode')
+           }
+    })
+    
     const fetchWeather = async () => {
         const apiKey = '57ad26d8d8989166f0ae73503542de6d'
 
@@ -107,6 +108,7 @@ const MainFrame = (props) => {
     }
 
     const [darkTheme, setDarkTheme] = useState(document.documentElement.classList.contains('darkMode') ? 'dark' : 'light')
+    console.log(darkTheme)
 
     return (
         <div
@@ -116,6 +118,7 @@ const MainFrame = (props) => {
                 weatherData={dataWeather}
                 darkModeIcons = {darkModeIcons}
                 theme={darkTheme}
+                setDarkTheme={setDarkTheme}
             />
             <Routes >
                 <Route
