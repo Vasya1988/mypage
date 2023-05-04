@@ -32,7 +32,7 @@ const AboutMe = (props) => {
                 </div>
             </div>
             <img 
-                src={props.logo.avatar}
+                src={props.theme === 'dark' ? props.logo.avatarDark : props.logo.avatar}
                 className={classes.Avatar}
             ></img>
         </div>

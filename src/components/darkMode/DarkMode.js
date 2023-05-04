@@ -5,15 +5,11 @@ const DarkMode = (props) => {
 
     const themeIcons = () => props.theme === 'light' ? props.darkModeIcons.light : props.darkModeIcons.dark
 
-    console.log(props.theme)
-
     const buttonToggle = (event) => {
         document.documentElement.classList.contains('darkMode') 
         ? document.documentElement.classList.remove('darkMode')
         : document.documentElement.classList.add('darkMode')
         props.setDarkTheme(props.theme === 'light' ? 'dark' : 'light')
-        
-        console.log(event)
     }
     
     return (

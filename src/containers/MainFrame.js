@@ -9,10 +9,11 @@ import {Routes, Route, Link} from 'react-router-dom';
 const MainFrame = (props) => {
     useEffect(() => {
         if (new Date().getHours() > 19 && darkTheme === 'light') {
+            setDarkTheme('dark');
             document.documentElement.classList.add('darkMode')
            }
-    })
-    
+    }, [])
+
     const fetchWeather = async () => {
         const apiKey = '57ad26d8d8989166f0ae73503542de6d'
 
@@ -66,6 +67,7 @@ const MainFrame = (props) => {
             },
         ],
         avatar: require('../images/logo/avatar.png'),
+        avatarDark: require('../images/logo/avatar_dark.png'),
         arrow: require('../images/arrow.png')
     });
 
@@ -123,7 +125,7 @@ const MainFrame = (props) => {
             <Routes >
                 <Route
                     path='/mypage'
-                    element={<AboutMe works={myWorks} logo={skillsIcons} />}
+                    element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
                     path='/works'
