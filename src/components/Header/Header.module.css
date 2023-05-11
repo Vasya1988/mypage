@@ -16,7 +16,15 @@
       .Header .codeWars {
         margin-top: 10px;
         flex-direction: column;
-        align-items: stretch; }
+        align-items: self-end;
+        display: grid;
+        grid-template: "codeLink codeLink" "weather dark";
+        justify-items: center;
+        width: 100%; }
+        .Header .codeWars .codeWarsLink {
+          grid-row: 1;
+          grid-area: codeLink;
+          width: 80%; }
         .Header .codeWars .codeWarsLink img {
           width: 100%; } }
   .Header nav {
