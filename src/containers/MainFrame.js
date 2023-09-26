@@ -83,14 +83,14 @@ const MainFrame = (props) => {
             url: 'https://vasya1988.github.io/routes-test/'
         },
         {
-            name: 'Buy Cart',
-            description: 'Корзина интернет магазина. Добавление, удаление, суммирование заказа',
-            url: 'https://vasya1988.github.io/buyRolls/'
+            name: 'ATM Machine',
+            description: 'Приложение банкомат, выводит количество запрашиваемых банкнот на экран',
+            url: 'https://vasya1988.github.io/atm/'
         },
         {
-            name: 'All Iphone',
-            description: 'Список всех Iphone. Добавлена темная тема',
-            url: 'https://vasya1988.github.io/all_iphones/'
+            name: 'Верстка сайта',
+            description: 'Обычная верстка сайта desktop/mobile',
+            url: 'https://vasya1988.github.io/test2/'
         },
         {
             name: 'React Todo App',
