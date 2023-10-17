@@ -68,7 +68,8 @@ const MainFrame = (props) => {
         ],
         avatar: require('../images/logo/avatar.png'),
         avatarDark: require('../images/logo/avatar_dark.png'),
-        arrow: require('../images/arrow.png')
+        arrow: require('../images/arrow.png'),
+        instagramLogo: require('../images/instagram.png')
     });
 
     const [myWorks, setMyWorks] = useState([
@@ -86,6 +87,11 @@ const MainFrame = (props) => {
             name: 'ATM Machine',
             description: 'Приложение банкомат, выводит количество запрашиваемых банкнот на экран',
             url: 'https://vasya1988.github.io/atm/'
+        },
+        {
+            name: 'Music App',
+            description: 'Музыкальный плеер',
+            url: 'https://vasya1988.github.io/musicapp/'
         },
         {
             name: 'Верстка сайта',
@@ -124,7 +130,7 @@ const MainFrame = (props) => {
             />
             <Routes >
                 <Route
-                    path='/mypage'
+                    path='/about' exact
                     element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
@@ -133,7 +139,7 @@ const MainFrame = (props) => {
                 ></Route>
                 <Route
                     path='/blog'
-                    element={<Blog />}
+                    element={<Blog icons={skillsIcons}/>}
                 ></Route>
             </Routes>
         </div>

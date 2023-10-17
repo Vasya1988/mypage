@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import classes from './index.css'
 import MainFrame from './containers/MainFrame';
 
 function App(props) {
