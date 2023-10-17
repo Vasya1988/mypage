@@ -130,7 +130,7 @@ const MainFrame = (props) => {
             />
             <Routes >
                 <Route
-                    path='/about' exact
+                    path='/mypage' exact
                     element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
