@@ -1,6 +1,6 @@
 import classes from './Header.module.sass'
 import React from 'react';
-import {Routes, Route, Link, NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import WeatherApp from '../weather-app/Weather-app';
 import DarkMode from '../darkMode/DarkMode';
 
