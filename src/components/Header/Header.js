@@ -19,11 +19,12 @@ const Header = (props) => {
             </nav>
             <div className={classes.codeWars}>
                 <a 
+                    rel='noreferrer'
                     href='https://www.codewars.com/users/va5ily'
                     target='_blank'
                     className={classes.codeWarsLink}
                 >
-                    <img src='https://www.codewars.com/users/va5ily/badges/small' />
+                    <img alt='image' src='https://www.codewars.com/users/va5ily/badges/small' />
                 </a>
                 <WeatherApp 
                     weatherData={props.weatherData}

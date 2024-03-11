@@ -21,7 +21,7 @@ const DarkMode = (props) => {
                 className={classes.modeIcon}
                 style={{backgrounImage: themeIcons(), left: props.theme === 'light' ? '0' : '28px'}}
             >
-                <img src={themeIcons()} />
+                <img alt='image' src={themeIcons()} />
             </button>
             
         </div>

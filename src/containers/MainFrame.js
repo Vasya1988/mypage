@@ -31,7 +31,7 @@ const MainFrame = (props) => {
     
     const [dataWeather, setDataWeather] = useState(fetchWeather)
     console.log('from data weather --> ', dataWeather)
-    const [skillsIcons, setSkillsIcons] = useState({
+    const skillsIcons = {
         icons: [
             {
                 name: 'Html',
@@ -70,9 +70,9 @@ const MainFrame = (props) => {
         avatarDark: require('../images/logo/avatar_dark.png'),
         arrow: require('../images/arrow.png'),
         instagramLogo: require('../images/instagram.png')
-    });
+    };
 
-    const [myWorks, setMyWorks] = useState([
+    const myWorks = [
         {
             name: 'React Weather App',
             description: "Приложение 'Погода' написанное на React",
@@ -108,7 +108,7 @@ const MainFrame = (props) => {
             description: 'Опрос для пользователей интренет-магазина детской обуви',
             url: 'https://vasya1988.github.io/social-survey/'
         }
-    ])
+    ];
 
     const darkModeIcons = {
         light: require('../images/light-mode-icon.png'), 
