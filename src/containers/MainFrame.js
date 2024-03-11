@@ -7,6 +7,10 @@ import Blog from '../components/blog/Blog';
 import {Routes, Route} from 'react-router-dom';
 
 const MainFrame = (props) => {
+    
+    const [darkTheme, setDarkTheme] = useState(document.documentElement.classList.contains('darkMode') ? 'dark' : 'light')
+    console.log(darkTheme)
+
     useEffect(() => {
         if (new Date().getHours() > 19 && darkTheme === 'light') {
             setDarkTheme('dark');
@@ -114,9 +118,6 @@ const MainFrame = (props) => {
         light: require('../images/light-mode-icon.png'), 
         dark: require('../images/night-mode-icon_dark-blue.png')
     }
-
-    const [darkTheme, setDarkTheme] = useState(document.documentElement.classList.contains('darkMode') ? 'dark' : 'light')
-    console.log(darkTheme)
 
     return (
         <div
