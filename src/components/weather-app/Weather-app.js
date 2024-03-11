@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import classes from './Weather-app.module.sass'
 
 
@@ -9,7 +8,7 @@ const WeatherApp = (props) => {
     
     return (
         <div className={classes.WeatherApp} >
-            <img alt='image' src={`http://openweathermap.org/img/wn/${props.weatherData.icon}@2x.png`} />
+            <img alt='icon' src={`http://openweathermap.org/img/wn/${props.weatherData.icon}@2x.png`} />
             <span className={classes.temp} >{Math.round(props.weatherData.temp)}°</span>
             <span className={classes.city}>{props.weatherData.name}</span>
         </div>

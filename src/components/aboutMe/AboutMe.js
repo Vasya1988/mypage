@@ -24,7 +24,7 @@ const AboutMe = (props) => {
                             >
                                 <span>{icon.name}</span>
                                 <img  
-                                    alt='image'
+                                    alt='icon name'
                                     src={icon.src}>
                                 </img>
                             </div>
@@ -33,7 +33,7 @@ const AboutMe = (props) => {
                 </div>
             </div>
             <img 
-                alt='image'
+                alt='icon dark'
                 src={props.theme === 'dark' ? props.logo.avatarDark : props.logo.avatar}
                 className={classes.Avatar}
             ></img>

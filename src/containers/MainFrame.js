@@ -4,7 +4,7 @@ import AboutMe from '../components/aboutMe/AboutMe';
 import { useState, useEffect } from 'react';
 import MyWorks from '../components/myWorks/MyWorks';
 import Blog from '../components/blog/Blog';
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 const MainFrame = (props) => {
     useEffect(() => {

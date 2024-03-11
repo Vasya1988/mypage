@@ -1,5 +1,4 @@
 import classes from './DarkMode.module.sass'
-import appStyle from '../../index.css'
 
 const DarkMode = (props) => {
 
@@ -21,7 +20,7 @@ const DarkMode = (props) => {
                 className={classes.modeIcon}
                 style={{backgrounImage: themeIcons(), left: props.theme === 'light' ? '0' : '28px'}}
             >
-                <img alt='image' src={themeIcons()} />
+                <img alt='theme icon' src={themeIcons()} />
             </button>
             
         </div>

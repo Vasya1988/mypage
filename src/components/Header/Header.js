@@ -24,7 +24,7 @@ const Header = (props) => {
                     target='_blank'
                     className={classes.codeWarsLink}
                 >
-                    <img alt='image' src='https://www.codewars.com/users/va5ily/badges/small' />
+                    <img alt='badge' src='https://www.codewars.com/users/va5ily/badges/small' />
                 </a>
                 <WeatherApp 
                     weatherData={props.weatherData}

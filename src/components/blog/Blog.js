@@ -16,7 +16,7 @@ const Blog = (props) => {
                 Далее, начал самостоятельно изучать React, вначале делал проекты на классовых компонентах, теперь на функциональных + хуки. React изучаю до сих пор. Как-либо сам, я не могу оценить твердо свой уровень, но на позиции junior, если в друг попадется задача, с которой я не сталкивался, думаю, при помощи интернета с ютубом, я смогу ее решить самостоятельно.
                 <br/>
                 <br/>
-                Мой gitHub <a target='_blank' href='https://github.com/Vasya1988'>https://github.com/Vasya1988</a>
+                Мой gitHub <a rel='noreferrer' target='_blank' href='https://github.com/Vasya1988'>https://github.com/Vasya1988</a>
             </p>
             <div className={classes.Social}>
                 <a rel='noreferrer' target="_blank" href='https://www.instagram.com/vasiliy_romanov_88/?hl=ru'><img src={props.icons.instagramLogo} /></a>
