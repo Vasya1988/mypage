@@ -7,7 +7,6 @@ import Blog from '../components/blog/Blog';
 import {Routes, Route} from 'react-router-dom';
 
 const MainFrame = (props) => {
-    
     const [darkTheme, setDarkTheme] = useState(document.documentElement.classList.contains('darkMode') ? 'dark' : 'light')
     console.log(darkTheme)
 
@@ -16,6 +15,7 @@ const MainFrame = (props) => {
             setDarkTheme('dark');
             document.documentElement.classList.add('darkMode')
            }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const fetchWeather = async () => {
