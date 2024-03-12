@@ -15,6 +15,7 @@ const MainFrame = (props) => {
             setDarkTheme('dark');
             document.documentElement.classList.add('darkMode')
            }
+           
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
