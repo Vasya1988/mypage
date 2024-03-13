@@ -131,15 +131,15 @@ const MainFrame = (props) => {
             />
             <Routes basename='/mypage'>
                 <Route
-                    path='/mypage'
+                    path='about'
                     element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
-                    path='/works'
+                    path='works'
                     element={<MyWorks works={myWorks} logo={skillsIcons} />}
                 ></Route>
                 <Route
-                    path='/blog'
+                    path='blog'
                     element={<Blog icons={skillsIcons}/>}
                 ></Route>
             </Routes>

@@ -13,9 +13,9 @@ const Header = (props) => {
             <nav
                 className={classes.Header__nav}
             >
-                <Link to='/mypage'>about me</Link>
-                <Link to='/works'>my works</Link>
-                <Link to='/blog'>blog</Link>
+                <Link to='about'>about me</Link>
+                <Link to='works'>my works</Link>
+                <Link to='blog'>blog</Link>
             </nav>
             <div className={classes.codeWars}>
                 <a 
