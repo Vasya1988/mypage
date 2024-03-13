@@ -129,7 +129,7 @@ const MainFrame = (props) => {
                 theme={darkTheme}
                 setDarkTheme={setDarkTheme}
             />
-            <Routes basename='/mypage'>
+            <Routes >{/* basename='/mypage' */}
                 <Route
                     path='about'
                     element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
