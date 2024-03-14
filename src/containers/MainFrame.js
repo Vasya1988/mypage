@@ -4,11 +4,14 @@ import AboutMe from '../components/aboutMe/AboutMe';
 import { useState, useEffect } from 'react';
 import MyWorks from '../components/myWorks/MyWorks';
 import Blog from '../components/blog/Blog';
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 const MainFrame = (props) => {
     useEffect(() => {
-        if (new Date().getHours() > 19 && darkTheme === 'light') {
+        if (
+            new Date().getHours() > 18 && 
+            darkTheme === 'light' &&
+            new Date().getHours() < 7) {
             setDarkTheme('dark');
             document.documentElement.classList.add('darkMode')
            }
@@ -31,7 +34,7 @@ const MainFrame = (props) => {
     
     const [dataWeather, setDataWeather] = useState(fetchWeather)
     console.log('from data weather --> ', dataWeather)
-    const [skillsIcons, setSkillsIcons] = useState({
+    const skillsIcons = {
         icons: [
             {
                 name: 'Html',
@@ -70,9 +73,9 @@ const MainFrame = (props) => {
         avatarDark: require('../images/logo/avatar_dark.png'),
         arrow: require('../images/arrow.png'),
         instagramLogo: require('../images/instagram.png')
-    });
+    };
 
-    const [myWorks, setMyWorks] = useState([
+    const myWorks = [
         {
             name: 'React Weather App',
             description: "Приложение 'Погода' написанное на React",
@@ -108,7 +111,7 @@ const MainFrame = (props) => {
             description: 'Опрос для пользователей интренет-магазина детской обуви',
             url: 'https://vasya1988.github.io/social-survey/'
         }
-    ])
+    ];
 
     const darkModeIcons = {
         light: require('../images/light-mode-icon.png'), 
@@ -130,7 +133,7 @@ const MainFrame = (props) => {
             />
             <Routes basename='/mypage'>
                 <Route
-                    path='/mypage'
+                    path='/'
                     element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
