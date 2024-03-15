@@ -11,7 +11,10 @@ const MainFrame = (props) => {
     console.log(darkTheme)
 
     useEffect(() => {
-        if (new Date().getHours() > 19 && darkTheme === 'light') {
+        if (
+            new Date().getHours() > 18 && 
+            darkTheme === 'light' ||
+            new Date().getHours() < 7) {
             setDarkTheme('dark');
             document.documentElement.classList.add('darkMode')
            }
@@ -131,7 +134,7 @@ const MainFrame = (props) => {
             />
             <Routes basename='/mypage'>
                 <Route
-                    path='/mypage'
+                    path='/'
                     element={<AboutMe works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
