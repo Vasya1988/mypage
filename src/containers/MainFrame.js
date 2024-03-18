@@ -7,10 +7,14 @@ import Blog from '../components/blog/Blog';
 import {Routes, Route} from 'react-router-dom';
 
 const MainFrame = (props) => {
+
+    // Темная тема
     const [darkTheme, setDarkTheme] = useState(document.documentElement.classList.contains('darkMode') ? 'dark' : 'light')
+
     console.log(darkTheme)
 
     useEffect(() => {
+        // Определение времени, для смены на темную тему
         if (
             new Date().getHours() > 18 && 
             darkTheme === 'light' ||
@@ -21,7 +25,9 @@ const MainFrame = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    // Обращаемся к API погода
     const fetchWeather = async () => {
+
         const apiKey = '57ad26d8d8989166f0ae73503542de6d'
 
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${'denver'}&appid=${apiKey}&units=metric&lang=ru`)
@@ -38,6 +44,8 @@ const MainFrame = (props) => {
     
     const [dataWeather, setDataWeather] = useState(fetchWeather)
     console.log('from data weather --> ', dataWeather)
+
+    // Иконки
     const skillsIcons = {
         icons: [
             {
@@ -79,6 +87,7 @@ const MainFrame = (props) => {
         instagramLogo: require('../images/instagram.png')
     };
 
+    // Портфолио
     const myWorks = [
         {
             name: 'React Weather App',
@@ -96,14 +105,14 @@ const MainFrame = (props) => {
             url: 'https://vasya1988.github.io/atm/'
         },
         {
+            name: 'Онлайн кинотеатр',
+            description: 'Аналог онлайн кионтеатра',
+            url: 'https://vasya1988.github.io/moviestore/'
+        },
+        {
             name: 'Music App',
             description: 'Музыкальный плеер',
             url: 'https://vasya1988.github.io/musicapp/'
-        },
-        {
-            name: 'Верстка сайта',
-            description: 'Обычная верстка сайта desktop/mobile',
-            url: 'https://vasya1988.github.io/test2/'
         },
         {
             name: 'React Todo App',
@@ -117,6 +126,7 @@ const MainFrame = (props) => {
         }
     ];
 
+    // Иконки light/night mode
     const darkModeIcons = {
         light: require('../images/light-mode-icon.png'), 
         dark: require('../images/night-mode-icon_dark-blue.png')
