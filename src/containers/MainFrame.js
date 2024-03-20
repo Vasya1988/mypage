@@ -70,11 +70,18 @@ const MainFrame = (props) => {
             },
             {
                 name: 'GitHub',
-                src: require('../images/logo/github_2_logo.png')
+                src: require(
+                    darkTheme === 'dark' 
+                    ? '../images/logo/github_2_white_logo.png' 
+                    : '../images/logo/github_2_logo.png'
+                    )
             },
             {
-                name: 'Photoshop',
-                src: require('../images/logo/photoshop_logo.png')
+                name: 'Next.js',
+                src: require(
+                    darkTheme === 'dark' 
+                    ? '../images/logo/next_js_white_logo.png' 
+                    : '../images/logo/next_js_logo.png')
             },
             {
                 name: 'Illustrator',
@@ -105,7 +112,7 @@ const MainFrame = (props) => {
             url: 'https://vasya1988.github.io/atm/'
         },
         {
-            name: 'Онлайн кинотеатр',
+            name: 'Cinema Online',
             description: 'Аналог онлайн кионтеатра',
             url: 'https://vasya1988.github.io/moviestore/'
         },
@@ -149,7 +156,7 @@ const MainFrame = (props) => {
                 ></Route>
                 <Route
                     path='/works'
-                    element={<MyWorks works={myWorks} logo={skillsIcons} />}
+                    element={<MyWorks works={myWorks} logo={skillsIcons} theme={darkTheme} />}
                 ></Route>
                 <Route
                     path='/blog'
