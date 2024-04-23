@@ -1,21 +1,23 @@
 import classes from './Header.module.sass'
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import WeatherApp from '../weather-app/Weather-app';
 import DarkMode from '../darkMode/DarkMode';
 
 const Header = (props) => {
 
+    const [hash, setHash] = useState(window.location.hash)
     return (
         <header
             className={classes.Header}
         >
             <nav
                 className={classes.Header__nav}
+                onClick={() => setHash(window.location.hash)}
             >
-                <Link to='/'>about me</Link>
-                <Link to='/works'>my works</Link>
-                <Link to='/blog'>blog</Link>
+                <Link className={hash === '#/' ? 'active' : ''} to='/'>about me</Link>
+                <Link className={hash === '#/works' ? 'active' : ''} to='/works'>my works</Link>
+                <Link className={hash === '#/blog' ? 'active' : ''} to='/blog'>blog</Link>
             </nav>
             <div className={classes.codeWars}>
                 <a 
