@@ -15,7 +15,7 @@ const Header = (props) => {
                 className={classes.Header__nav}
                 onClick={() => setHash(window.location.hash)}
             >
-                <Link className={hash === '#/' ? 'active' : ''} to='/'>about me</Link>
+                <Link className={hash === '#/' || '/' ? 'active' : ''} to='/'>about me</Link>
                 <Link className={hash === '#/works' ? 'active' : ''} to='/works'>my works</Link>
                 <Link className={hash === '#/blog' ? 'active' : ''} to='/blog'>blog</Link>
             </nav>
