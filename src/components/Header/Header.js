@@ -7,7 +7,7 @@ import DarkMode from '../darkMode/DarkMode';
 const Header = (props) => {
 
     const [hash, setHash] = useState(window.location.pathname)
-
+    console.log('path name --> ', hash)
     return (
         <header
             className={classes.Header}
@@ -16,7 +16,7 @@ const Header = (props) => {
                 className={classes.Header__nav}
                 onClick={() => setHash(window.location.hash)}
             >
-                <Link className={hash === '#/' || hash === '/' ? 'active' : ''} to='/'>about me</Link>
+                <Link className={hash === '#/' || hash === '/mypage' || hash === '/mypage/' ? 'active' : ''} to='/'>about me</Link>
                 <Link className={hash === '#/works' ? 'active' : ''} to='/works'>my works</Link>
                 <Link className={hash === '#/blog' ? 'active' : ''} to='/blog'>blog</Link>
             </nav>
